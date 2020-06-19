@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:fillViewport="true"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/player_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true">
+
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/player_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:show_buffering="when_playing"
+                />
+
+            <TextView
+                android:id="@+id/player_default_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/step_detail_fragment_player_default_message"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:visibility="gone"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/player_layout">
+
+            <TextView
+                android:id="@+id/step_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/step_detail_fragment_step_description_layout_margin_start"
+                android:layout_marginLeft="@dimen/step_detail_fragment_step_description_layout_margin_left"
+                android:layout_marginTop="@dimen/step_detail_fragment_step_description_layout_margin_top"
+                android:layout_marginEnd="@dimen/step_detail_fragment_step_description_layout_margin_end"
+                android:layout_marginRight="@dimen/step_detail_fragment_step_description_layout_margin_right"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/step_detail_fragment_step_description_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <Button
+                android:id="@+id/previous_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/step_detail_fragment_previous_step_layout_margin_start"
+                android:layout_marginLeft="@dimen/step_detail_fragment_previous_step_layout_margin_left"
+                android:layout_marginTop="@dimen/step_detail_fragment_previous_step_layout_margin_top"
+                android:text="@string/step_detail_fragment_previous_step_button_text"
+                android:textSize="@dimen/step_detail_fragment_previous_step_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_description" />
+
+            <Button
+                android:id="@+id/next_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_detail_fragment_next_step_layout_margin_top"
+                android:layout_marginEnd="@dimen/step_detail_fragment_next_step_layout_margin_end"
+                android:layout_marginRight="@dimen/step_detail_fragment_next_step_layout_margin_right"
+                android:text="@string/step_detail_fragment_next_step_button_text"
+                android:textSize="@dimen/step_detail_fragment_next_step_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</ScrollView>

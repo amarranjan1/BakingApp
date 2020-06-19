@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recipe_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    app:cardCornerRadius="@dimen/card_view_app_corner_radius">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recipe_image"
+            android:layout_width="150dp"
+            android:layout_height="190dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/nutella_pie"
+            />
+
+        <TextView
+            android:id="@+id/recipe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textSize="@dimen/recipe_name_text_size_phone"
+            android:text="Avenger"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:layout_marginStart="5dp" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+

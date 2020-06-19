@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ingredient_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ingredients_list_item_material_card_view_layout_margin"
+    app:cardCornerRadius="@dimen/ingredients_list_item_material_card_view_corner_radius"
+    app:strokeColor="@android:color/black"
+    app:strokeWidth="@dimen/ingredients_list_item_material_card_view_stroke_width">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/quantity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_quantity_header_layout_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_quantity_header_layout_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_quantity_header_layout_margin_top"
+            android:text="@string/quantity"
+            android:textSize="@dimen/ingredients_list_item_quantity_header_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quantity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_quantity_value_layout_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_quantity_value_layout_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_quantity_value_layout_margin_top"
+            android:text="@string/_2"
+            android:textSize="@dimen/ingredients_list_item_quantity_value_text_size"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintStart_toEndOf="@+id/quantity_header"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/measure_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_measure_header_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_measure_header_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_measure_header_margin_top"
+            android:text="@string/measure"
+            android:textSize="@dimen/ingredients_list_item_measure_header_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_header" />
+
+        <TextView
+            android:id="@+id/measure_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_measure_value_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_measure_value_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_measure_value_margin_top"
+            android:text="@string/cup"
+            android:textSize="@dimen/ingredients_list_item_measure_value_text_size"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintStart_toEndOf="@+id/measure_header"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_value" />
+
+        <TextView
+            android:id="@+id/ingredient_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_ingredient_header_layout_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_ingredient_header_layout_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_ingredient_header_layout_margin_top"
+            android:text="@string/ingredient"
+            android:textSize="@dimen/ingredients_list_item_ingredients_header_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/measure_header" />
+
+        <TextView
+            android:id="@+id/ingredient_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ingredients_list_item_ingredient_value_layout_margin_start"
+            android:layout_marginLeft="@dimen/ingredients_list_item_ingredient_value_layout_margin_left"
+            android:layout_marginTop="@dimen/ingredients_list_item_ingredient_value_layout_margin_top"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/graham_cracker_crumbs"
+            android:textSize="@dimen/ingredients_list_item_ingredients_value_text_size"
+            app:layout_constraintStart_toEndOf="@+id/ingredient_header"
+            app:layout_constraintTop_toBottomOf="@+id/measure_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
